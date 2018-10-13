@@ -1,0 +1,23 @@
+{
+    "name": "const-manager",
+    "version": "0.0.1",
+    "description": "常量管理",
+    "author": "Aguangtian",
+    "main": "main.js",
+    "main-menu": {
+        "Packages/通用/常量": {
+            "message": "const-manager:run"
+        }
+    },
+    "dependencies": {},
+    "devDependencies": {
+
+    },
+    "panel": {
+        "main": "panel/index.js",
+        "type": "dockable",
+        "title": "常量管理",
+        "width": 600,
+        "height": 800
+    }
+}
