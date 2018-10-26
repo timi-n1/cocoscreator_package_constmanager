@@ -62,7 +62,7 @@ Editor.Panel.extend({
 
     ready() {
 
-        const fs = require('fs');
+        const fs = require('fs-extra');
         const path = require('path');
         const resFile = path.resolve(Editor.projectInfo.path, './assets/lib/const-manager.js');
         const dtsFile = path.resolve(Editor.projectInfo.path, './typings/const-manager.d.ts');
@@ -146,6 +146,7 @@ Editor.Panel.extend({
                     //js文件
                     const mapStr = JSON.stringify(data, true, 4);
                     const txt = templateTxt.replace(`'##constMapHoldPlace##'`, mapStr);
+                    fs.ensureFileSync(resFile);
                     fs.writeFileSync(resFile, txt);
                     //d.ts文件
                     let dts = 'declare module cs.Const {\n';
