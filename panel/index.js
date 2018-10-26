@@ -154,6 +154,7 @@ Editor.Panel.extend({
                         dts += this.getTypeDTS(type);
                     }
                     dts += '}\n';
+                    fs.ensureFileSync(dtsFile);
                     fs.writeFileSync(dtsFile, dts);
                     Editor.success('成功');
                 },
