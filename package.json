@@ -1,6 +1,6 @@
 {
     "name": "const-manager",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "常量管理",
     "author": "Aguangtian",
     "main": "main.js",
